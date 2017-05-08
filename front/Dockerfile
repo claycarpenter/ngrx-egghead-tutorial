@@ -11,6 +11,10 @@ WORKDIR /app
 # Copy app into app directory
 COPY . ./
 
+# Install required npm modules
+RUN npm install
+
 EXPOSE 4200
 
-CMD npm start
+# Launch Angular CLI dev server
+CMD ng serve --host 0.0.0.0
