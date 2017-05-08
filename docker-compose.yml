@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  front:
+    build: ./front
+    volumes:
+      - ./front:/app:delegated
+    ports:
+      - "4200:4200"
